@@ -4,39 +4,27 @@
     scroll-behavior: smooth;
 } 
 #container{
-    width: 100vh;
-    height: 100vw;
+    width: 100vw;
+    height: 100%;
     background-color: blue;
-    transform: rotate(-90deg) translateX(-100vh);
-    transform-origin: top left;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    position: absolute;
-    /* to remove scrollbar in IE */
-    scrollbar-width: none;
-    /* firefox */
-    -ms-overflow-style: none;
 }
-/* chrome and safari */
-::-webkit-scrollbar{
-    display: none;
+#sectionWrapper{
+    width: 100vw;
+    height: 400vh;
 }
-#wrapper{
-    width: 500vw;
-    display: flex;
-    flex-direction: row;
-    transform: rotate(90deg) translateY(-100vh);
-    transform-origin: top left;
-}
-.content{
+.section{
     width: 100vw;
     height: 100vh;
 }
-
-/* ------------Homepage */
-#home{
-    background-color: #ffffff;
+.contentWrap{
+    width: 100vw;
+    height: 100vh;
+    padding: 100px 20px;
 }
+
+
+
+/* ------------header menu */
 #header{
     height: 50px;
     width: 100vw;
@@ -57,13 +45,8 @@
     line-height: 50px;
     font-size: smaller;
 }
-#mainText{
-    font-size: 40px;
-    color: black;
-    margin: 200px 20px;
-}
 
-/* footer menu */
+/* ------------footer menu */
 #footer{
     height: 50px;
     width: 100vw;
@@ -82,22 +65,94 @@
 #menu li{
     line-height: 50px;
     margin: 0 20px;
+}
+#menu li a{
     text-decoration: none;
+    color: gray;
 }
 .menuIcon{
-    width: 50px;
+    width: 20px;
+    font-size: 30px;
+}
+
+/* ------------Homepage */
+#home{
+    background-color: #ffffff;
+}
+#mainText{
     font-size: 40px;
+    color: black;
 }
 
 
-
-
+/* ------------About Me */
 #about{
-    background-color: yellow;
+    background-color: white
+}
+#about .contentWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#about ul{
+    list-style-type: none;
+}
+#skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#language, #tools{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+#skills img{
+    width: 50px;
+    height: 50px;
+    object-fit: scale-down;
+}
+#credit{
+    font-size: 5px;
+    text-align: right;
 }
 .project{
     background-color: orange;
 }
 #contact{
     background-color: red;
+}
+
+
+@media (min-width:600px){
+    #container{
+        width: 100vh;
+        height: 100vw;
+        background-color: blue;
+        transform: rotate(-90deg) translateX(-100vh);
+        transform-origin: top left;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: absolute;
+        /* to remove scrollbar in IE */
+        scrollbar-width: none;
+        /* firefox */
+        -ms-overflow-style: none;
+    }
+    /* chrome and safari */
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    #sectionWrapper{
+        width: 500vw;
+        display: flex;
+        flex-direction: row;
+        transform: rotate(90deg) translateY(-100vh);
+        transform-origin: top left;
+    }
+    .section{
+        width: 100vw;
+        height: 100vh;
+    }
+    
 }
