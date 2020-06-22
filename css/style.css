@@ -31,7 +31,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     background-color: #dbdbdb;
     padding: 5px;
     display: flex;
@@ -53,7 +53,7 @@
     position: fixed;
     bottom : 0;
     left: 0;
-    border: 1px solid black;
+    border-top: 1px solid black;
     background-color: #ffffff;
     padding: 5px;
     display: flex;
@@ -116,8 +116,16 @@
     font-size: 5px;
     text-align: right;
 }
-.project{
+
+/* ------------Projects */
+#roject{
     background-color: orange;
+}
+#project p{
+    font-size: 10px;
+}
+#project iframe{
+    width: 100%;
 }
 
 /* ------------Contact Me */

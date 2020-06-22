@@ -1,0 +1,251 @@
+<html>
+    <head>
+        <title>xylophone</title>
+        <style>
+            #container{
+                width: 800px;
+                height: 500px;
+                background-color: black;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }
+            #padContainer{
+                width: 800px;
+                height: 300px;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+
+            }
+            .pad{
+                width: 50px;
+                border: 1px groove white;
+                margin: 0 5px;
+                color: black;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 20px;
+            }
+            #pad1{
+                background-color: red;
+                height: 220px;
+            }
+            #pad2{
+                background-color: orange;
+                height: 200px;
+            }
+            #pad3{
+                background-color: yellow;
+                height: 180px;
+            }
+            #pad4{
+                background-color:green;
+                height: 160px;
+            }
+            #pad5{
+                background-color: white;
+                height: 140px;
+            }
+            #pad6{
+                background-color: blue;
+                height: 120px;
+            }
+            #pad7{
+                background-color:purple;
+                height: 100px;
+            }
+            #pad8{
+                background-color:indianred;
+                height: 80px;
+            }
+            .active{
+                transform: scale(1.2);
+            }
+
+            #btn{
+                width: 200px;
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>THE XYLOPHONE</h1>
+            <div id="padContainer">
+                <div class="pad" id="pad1">C</div>
+                <div class="pad" id="pad2">D</div>
+                <div class="pad" id="pad3">E</div>
+                <div class="pad" id="pad4">F</div>
+                <div class="pad" id="pad5">G</div>
+                <div class="pad" id="pad6">A</div>
+                <div class="pad" id="pad7">B</div>
+                <div class="pad" id="pad8">C*</div>
+            </div>
+            <button id='btn' onclick="playSong()">Play 'Happy Birthday' Song</button>
+        </div>
+        <script type="text/javascript" src="song.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.core.min.js" >// howler.js library </script> 
+        <script>
+            var keyList = {}; // create keylist to list out what key had been pressed
+            var pad = document.getElementsByClassName('pad'); // to select pad
+            var soundList = {
+                snd1:new Howl({src:['audio/1.mp3']}), 
+                snd2:new Howl({src:['audio/2.mp3']}),
+                snd3:new Howl({src:['audio/3.mp3']}),
+                snd4:new Howl({src:['audio/4.mp3']}), 
+                snd5:new Howl({src:['audio/5.mp3']}),
+                snd6:new Howl({src:['audio/6.mp3']}),
+                snd7:new Howl({src:['audio/7.mp3']}),
+                snd8:new Howl({src:['audio/8.mp3']}),
+                snd9:new Howl({src:['audio/9.mp3']}),
+            }
+
+            // to detect which key is pressed
+            document.addEventListener('keydown', function(evt){
+                // to add pressed key into the list
+                keyList[evt.keyCode] = true;
+                console.log(keyList);
+
+                if (keyList[65] === true){
+                    soundList.snd1.play();
+                    pad[0].className ="pad active";
+                }
+                if (keyList[83] === true){
+                    soundList.snd2.play();
+                    pad[1].className ="pad active";
+                }
+                if (keyList[68] === true){
+                    soundList.snd3.play();
+                    pad[2].className ="pad active";
+                }
+                if (keyList[70] === true){
+                    soundList.snd4.play();
+                    pad[3].className ="pad active";
+                } 
+                if (keyList[71] === true){
+                    soundList.snd5.play();
+                    pad[4].className ="pad active";
+                }
+                if (keyList[72] === true){
+                    soundList.snd6.play();
+                    pad[5].className ="pad active";
+                }
+                if (keyList[74] === true){
+                    soundList.snd7.play();
+                    pad[6].className ="pad active";
+                }
+                if (keyList[75] === true){
+                    soundList.snd8.play();
+                    pad[7].className ="pad active";
+                }
+            })
+
+            // function to remove active class
+            function removePadActive(){
+                for(var x = 0 ; x < pad.length; x++){
+                    pad[x].className = "pad";
+                }
+            }  
+
+            // to reset the list everytime key is released 
+            document.addEventListener('keyup', function(evt) {
+                delete keyList[evt.keyCode]; // to delete everything inside the keyList
+                removePadActive(); // to remove active class when key is released
+                // console.log(keyList); to check whether keyList is reset
+            })  
+
+
+
+            // happy birthday song
+
+            // function playSong(){
+            //     //Hap
+            //     console.log('function called');
+            //     setTimeout(function (){
+            //         soundList.snd1.play();
+            //         pad[0].className ="pad active";
+            //         console.log('cNote played');
+            //         removePadActive();
+            //     },500);
+
+            //     //-py
+            //     setTimeout(function (){
+            //         soundList.snd1.play();
+            //         pad[0].className ="pad active";
+            //         console.log('cNote played');
+            //         removePadActive();
+            //     },1000);
+
+            //     //Birth-
+            //     setTimeout(function (){
+            //         soundList.snd2.play();
+            //         pad[1].className ="pad active";
+            //         console.log('dNote played');
+            //         removePadActive();
+            //     },1500);
+
+            //     //-Day
+            //     setTimeout(function (){
+            //         soundList.snd1.play();
+            //         pad[0].className ="pad active";
+            //         console.log('cNote played');
+            //         removePadActive();
+            //     },2000);
+
+            //     setTimeout(function (){
+            //         soundList.snd4.play();
+            //         pad[3].className ="pad active";
+            //         console.log('cNote played');
+            //         removePadActive();
+            //     },2500);
+
+            //     setTimeout(function (){
+            //         soundList.snd3.play();
+            //         pad[2].className ="pad active";
+            //         console.log('cNote played');
+            //         removePadActive();
+            //     },3000);
+
+            //     //Hap
+            //     console.log('function called');
+            //     setTimeout(function (){
+            //         soundList.snd1.play();
+            //         pad[0].className ="pad active";
+            //         console.log('cNote played');
+            //         removePadActive();
+            //     },500);
+
+            //     //-py
+            //     setTimeout(function (){
+            //         soundList.snd1.play();
+            //         pad[0].className ="pad active";
+            //         console.log('cNote played');
+            //         removePadActive();
+            //     },1000);
+
+            //     //Birth-
+            //     setTimeout(function (){
+            //         soundList.snd2.play();
+            //         pad[1].className ="pad active";
+            //         console.log('dNote played');
+            //         removePadActive();
+            //     },1500);
+
+            //     //-Day
+            //     setTimeout(function (){
+            //         soundList.snd1.play();
+            //         pad[0].className ="pad active";
+            //         console.log('cNote played');
+            //         removePadActive();
+            //     },2000);
+            // }
+            
+        </script>
+    </body>
+</html>
