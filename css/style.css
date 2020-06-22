@@ -19,7 +19,7 @@
 .contentWrap{
     width: 100vw;
     height: 100vh;
-    padding: 100px 20px;
+    padding: 80px 20px;
 }
 
 
@@ -119,8 +119,44 @@
 .project{
     background-color: orange;
 }
+
+/* ------------Contact Me */
 #contact{
-    background-color: red;
+    background-color: white;
+}
+#contact .contentWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#contact ul{
+    list-style-type: none;
+}
+.contactIcon{
+    width: 50px;
+}
+#contactInfo ul{
+    display: flex;
+    flex-direction: column;
+}
+#contactInfo li{
+    margin: 5px 0;
+}
+#socMed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#socMed ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+.socmedIcon{
+    width: 40px;
+    font-size: 20px;
+    margin: 10px;
 }
 
 
