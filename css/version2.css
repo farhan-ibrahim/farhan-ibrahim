@@ -1,0 +1,103 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+} 
+#container{
+    width: 100vh;
+    height: 100vw;
+    background-color: blue;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    /* to remove scrollbar in IE */
+    scrollbar-width: none;
+    /* firefox */
+    -ms-overflow-style: none;
+}
+/* chrome and safari */
+::-webkit-scrollbar{
+    display: none;
+}
+#wrapper{
+    width: 500vw;
+    display: flex;
+    flex-direction: row;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+.content{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ------------Homepage */
+#home{
+    background-color: #ffffff;
+}
+#header{
+    height: 50px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+    background-color: #dbdbdb;
+    padding: 5px;
+    display: flex;
+}
+#profileLogo{
+    border-radius: 50%;
+    background-size: cover;
+    height: 100%;
+}
+#profileName{
+    line-height: 50px;
+    font-size: smaller;
+}
+#mainText{
+    font-size: 40px;
+    color: black;
+    margin: 200px 20px;
+}
+
+/* footer menu */
+#footer{
+    height: 50px;
+    width: 100vw;
+    position: fixed;
+    bottom : 0;
+    left: 0;
+    border: 1px solid black;
+    background-color: #ffffff;
+    padding: 5px;
+    display: flex;
+}
+#menu{
+    list-style-type: none; 
+    display: flex;
+}
+#menu li{
+    line-height: 50px;
+    margin: 0 20px;
+    text-decoration: none;
+}
+.menuIcon{
+    width: 50px;
+    font-size: 40px;
+}
+
+
+
+
+#about{
+    background-color: yellow;
+}
+.project{
+    background-color: orange;
+}
+#contact{
+    background-color: red;
+}
