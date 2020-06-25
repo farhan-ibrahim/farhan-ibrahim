@@ -3,10 +3,11 @@
     font-family: sans-serif;
     scroll-behavior: smooth;
 } 
+
+
 #container{
     width: 100vw;
     height: 100%;
-    background-color: blue;
 }
 #sectionWrapper{
     width: 100vw;
@@ -17,33 +18,49 @@
     height: 100vh;
 }
 .contentWrap{
-    width: 100vw;
-    height: 100vh;
-    padding: 80px 20px;
+    width: 100%;
+    height: 100%;
+    padding: 60px 20px;
+}
+hr{
+    height:2px;
+    border-width:0;
+    color:#0b132b;
+    background-color:#0b132b;
 }
 
 
-
 /* ------------header menu */
+.header{
+    width: 100%;
+    height: 50px;
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
 #header{
     height: 50px;
     width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom: 1px solid black;
-    background-color: #dbdbdb;
-    padding: 5px;
-    display: flex;
+    border-bottom: 2px solid #1247b9;
+    background-color: white;
+    z-index: 10;
 }
 #profileLogo{
     border-radius: 50%;
     background-size: cover;
-    height: 100%;
+    background-color: #1247b9 ;
+    height: 80%;
 }
 #profileName{
+    margin-left: 10px;
     line-height: 50px;
+    letter-spacing: 2px;
     font-size: smaller;
+    color: black;
 }
 
 /* ------------footer menu */
@@ -53,22 +70,26 @@
     position: fixed;
     bottom : 0;
     left: 0;
-    border-top: 1px solid black;
-    background-color: #ffffff;
+    border-top: 2px solid #1247b9;
+    background-color: white;
     padding: 5px;
     display: flex;
+    z-index: 10;
 }
 #menu{
     list-style-type: none; 
     display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 #menu li{
     line-height: 50px;
-    margin: 0 20px;
+    width:50px;
+    text-align: center;
 }
 #menu li a{
     text-decoration: none;
-    color: gray;
+    color: black;
 }
 .menuIcon{
     width: 20px;
@@ -77,40 +98,114 @@
 
 /* ------------Homepage */
 #home{
-    background-color: #ffffff;
+    background-color: white;
 }
-#mainText{
-    font-size: 40px;
+#topContentHome{
+    display: flex;
+    flex-direction: column;
+}
+#mainText1, #mainText2{
+    font-size: 30px;
     color: black;
+    transition: all 1s;
+}
+#mainText1{
+    color:black;
+}
+/* #mainText2{
+    position: absolute;
+} */
+#engineer{
+    max-width: 60%;
+    height: auto;
+    transition: all 1s;
+}
+#programmer{
+    display: none;
+    opacity: 0;
+    transition: all 1s;
+}
+#home button{
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1247b9;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+@keyframes engMoveLeft{
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-200px);
+        opacity: 1;
+    }
+}
+
+/* @keyframes textMoveDown{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(290px);
+    }
+} */
+
+@keyframes progMoveLeft{
+    from{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
 
 /* ------------About Me */
 #about{
-    background-color: white
+    background-color: #1c2541;
 }
 #about .contentWrap{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: lightgray;
+}
+#desc{
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
 }
 #about ul{
     list-style-type: none;
 }
 #skills{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #language, #tools{
-    display: flex;
     width: 100%;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 #skills img{
-    width: 50px;
-    height: 50px;
-    object-fit: scale-down;
+    max-width: 30px;
+    max-height: 30px ;
+    object-fit: cover;
 }
 #credit{
     font-size: 5px;
@@ -120,16 +215,18 @@
 /* ------------Projects */
 #project{
     background-color: white;
+    /* #3a506b */
 }
 #project .contentWrap{
-    height: 80px;
+    height: auto;
 }
+
 #project p{
     font-size: 10px;
 }
 #projectBox{
     width: 100%;
-    height: 600px;
+    height: 300px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: calc(100%/3) calc(100%/3) calc(100%/3);
@@ -158,13 +255,15 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .cardFront{
     overflow: hidden;
     justify-content: center;
     background-color: white;
 }
-.cardFront::after{
+/* .cardFront::after{
     width: 20px;
     height: 20px;
     content: "i";
@@ -175,7 +274,7 @@
     border-radius: 50%;
     text-align: center;
     color: white;
-}
+} */
 .cardBack{
     transform: rotateY(180deg);
     color: white;
@@ -189,16 +288,65 @@
     object-fit: cover;
 }
 
+/* modal for project */
+#modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+
+    /* display: flex; */
+    justify-content:center;
+    align-items: center;
+}
+.modalDiv{
+    transform: rotateY(360deg);
+    width: 300px;
+    height: 200px;
+    position: relative;
+    display: none;
+}
+.modalDiv button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    text-align: right;
+    border: none;
+}
+
 
 /* ------------Contact Me */
 #contact{
-    background-color: white;
+    background-color: #5bc0be;
+    color: white;
 }
 #contact .contentWrap{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+#clientInfo input{
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-transform: capitalize;
+    padding: 10px;
+    border: 1px solid lightgrey;
+}
+#clientInfo button{
+    float: right;
+    background-color: #1247b9;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+}
+
 #contact ul{
     list-style-type: none;
 }
@@ -230,8 +378,9 @@
 }
 
 
+/* Large Screen View */
 @media (min-width:600px){
-    #container{
+    /* #container{
         width: 100vh;
         height: 100vw;
         background-color: blue;
@@ -240,16 +389,16 @@
         overflow-y: scroll;
         overflow-x: hidden;
         position: absolute;
-        /* to remove scrollbar in IE */
+        to remove scrollbar in IE
         scrollbar-width: none;
-        /* firefox */
+        firefox
         -ms-overflow-style: none;
-    }
+    } */
     /* chrome and safari */
-    ::-webkit-scrollbar{
+    /* ::-webkit-scrollbar{
         display: none;
-    }
-    #sectionWrapper{
+    } */
+    /* #sectionWrapper{
         width: 500vw;
         display: flex;
         flex-direction: row;
@@ -259,11 +408,62 @@
     .section{
         width: 100vw;
         height: 100vh;
+    } */
+
+    .contentWrap{
+        max-width: 1000px;
+        height: 100%;
+        padding: 60px 20px;
+        margin: 0 auto;
     }
 
+    #footer{
+        display: none;
+    }
+    #topContentHome{
+        width: 100%;
+        height:200px;
+        display: flex;
+        flex-direction: row;
+    }
+    #mainText1, #mainText2{
+        width: 50%;
+        font-size: 60px;
+        color: black;
+        transition: all 1s;
+    }
+    #engineer{
+        width: auto;
+        height: 300px;
+        float: right;
+        overflow: visible;
+        transition: all 1s;
+    }
+
+    /* ----- about */
+    #about h1{
+        font-size: 40px;
+    }
+    #desc{
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
+    #skills img{
+        max-width: 80px;
+        max-height: 80px ;
+        object-fit: cover;
+    }
+
+
+    /* ----- project */
+    #project h1{
+        font-size: 50px;
+    }
     #projectBox{
         width: 100%;
-        height: 600px;
+        height: 400px;
         display: grid;
         grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
         grid-template-rows:50% 50%;
@@ -273,4 +473,16 @@
         transform: rotateY(180deg);
     }
     
+}
+/* Small Screen View */
+@media (max-width:400px){
+    #project .contentWrap{
+        padding-bottom: 0;
+    }
+    #projectBox{
+        width: 100%;
+        height: 500px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:auto;
 }

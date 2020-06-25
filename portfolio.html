@@ -7,34 +7,44 @@
     </head>
     <body>
         <div id="container"> 
-            <div id="sectionWrapper">
+            <!-- <div id="sectionWrapper"> -->
                 <section class="section" id="home" >
-                    <div class="contentWrap">
-                        <div id="header">
+                    <div id="header">
+                        <div class="contentWrap header">
                             <a href="#home"><img id="profileLogo" src="images/person.png" /></a>
-                            <h1 id="profileName">farhan ibrahim</h1>
-                        </div>
-                        <h1 id="mainText">I'm Farhan. I used to design chemical plant,
-                        <br>
-                        but now I design website</h1>
-                        <div id="footer">
-                            <ul id="menu">
-                                <li><a href="#about"><i class="fa fa-comment menuIcon"></a></i></i></li>
-                                <li><a href="#project"><i class="fa fa-suitcase menuIcon"></a></i></i></li>
-                                <li><a href="#contact"><i class="fa fa-paper-plane menuIcon"></a></i></i></li>
-                            </ul>
+                            <h1 id="profileName">farhan ibrahim.</h1>
                         </div>
                     </div>
-                    
+                    <div class="contentWrap">
+                        <div id="topContentHome">
+                            <h1 id="mainText1">I'm Farhan. <span>I used to design chemical plant,</span></h1>
+                            <br>
+                            <img id="engineer" src="images/engineer.svg"/>
+                            <!-- <img id="programmer" src="images/programmer.svg"/> -->
+                        </div>
+                        
+                        <h1 id="mainText2">but now I design website</h1>
+                        <br>
+                        <button>Let's have a talk</button>
+
+                        <div id="footer">
+                            <ul id="menu">
+                                <li><a href="#home"><i class="fa fa-home menuIcon"></a></i></i></li>
+                                <li><a href="#about"><i class="fa fa-user menuIcon"></a></i></i></li>
+                                <li><a href="#project"><i class="fa fa-suitcase menuIcon"></a></i></i></li>
+                                <li><a href="#contact"><i class="fa fa-phone menuIcon"></a></i></i></li>
+                            </ul>
+                        </div>   
+                    </div>
                 </section>
                 <section class="section" id="about">
                     <div class="contentWrap">
-                        <h1>about me</h1>
+                        <h1>About me</h1>
                         <div id="desc">
-                            <p>I called myself a hybrid software developer. I started as chemical engineer but later I developped interest in coding and programming. I clean and analyze data. I develop website and design minimalist responsive webpage.
+                            <p>I am not your 'pure breed' software developer. I started as chemical engineer but later I developped interest in coding and programming. I am able to clean and analyze data. Know, I learn to develop website and design minimalist responsive webpage.
                             </p>
                         </div>
-                        <h1>skills</h1>
+                        <h1>Know-How</h1>
                         <div id="skills">
                             <ul id="language">
                                 <li><img src="images/html5.png"></li>
@@ -52,16 +62,13 @@
                         </div> 
                         <p id="credit">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>  
                 </section>
-                <section class="section" >this is project</section>
                 
                 <section class="section" id="project">
                     <div class="contentWrap">
-                        <h1>my <i>chef-d'œuvre*</i></h1>
-                        <p>*masterpiece</p>
-                        
+                        <h1>La Galeria</h1>  
                     </div>
                     <div id="projectBox">
-                        <div class="projectCard" id="card1" onclick="showInfo()">
+                        <div class="projectCard" id="card0" onclick="showInfo(0)">
                             <div class="cardInner">
                                 <div class="cardFront">
                                     <img src="images/pacman.svg"/>
@@ -72,18 +79,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="projectCard" id="card2">
+                        <div class="projectCard" id="card1" onclick="showInfo(1)">
                             <div class="cardInner">
                                 <div class="cardFront">
                                     <img src="images/responsive.svg"/>
                                 </div>
                                 <div class="cardBack">
                                     <h1>Responsive Webpage</h1>
-                                    <p>A mobile responsive webpage that work in differenet device</p>
+                                    <p>A mobile responsive webpage that work in different device</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="projectCard" id="card3">
+                        <div class="projectCard" id="card2" onclick="showInfo(2)">
                             <div class="cardInner">
                                 <div class="cardFront">
                                     <img src="images/xylophone.svg"/>
@@ -94,7 +101,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="projectCard" id="card4">
+                        <div class="projectCard" id="card3" onclick="showInfo(3)">
                             <div class="cardInner">
                                 <div class="cardFront">
                                     <img src="images/ui.svg"/>
@@ -105,18 +112,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="projectCard" id="card2">
+                        <div class="projectCard" id="card4" onclick="showInfo(4)">
                             <div class="cardInner">
                                 <div class="cardFront">
                                     <img src="images/ui.svg"/>
                                 </div>
                                 <div class="cardBack">
-                                    <h1>New Proejct</h1>
+                                    <h1>New Project</h1>
                                     <p>coming soon</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="projectCard" id="card1">
+                        <div class="projectCard" id="card5" onclick="showInfo(5)">
                             <div class="cardInner">
                                 <div class="cardFront">
                                     <img src="images/ui.svg"/>
@@ -135,6 +142,12 @@
                         <h1>doubt me? 
                         <br>
                         let's have a talk</h1>
+                        <div id="clientInfo">
+                            <input placeholder="Name">
+                            <input placeholder="Email">
+                            <input placeholder="Message">
+                            <button id="send">send</button>
+                        </div>
                         <div id="contactInfo">
                             <ul>
                                 <li><i class="fa contactIcon fa-map-marker"></i>bangi, Malaysia</li>
@@ -153,7 +166,43 @@
                         </div>
                     </div>
                 </section>
+            <!-- </div> -->
+        </div>
+
+        <!-- modal for project -->
+        <div id="modal">
+            <div class="cardBack modalDiv" id="cBM2">
+                <button onclick="hideModal()"><i class="fa fa-times"></i></button>
+                <h1>PacMan</h1>
+                <p>PacMan simulator made using pure javascript</p>
             </div>
+            <div class="cardBack modalDiv" id="cBM2">
+                <button onclick="hideModal()"><i class="fa fa-times"></i></button>
+                <h1>Responsive Webpage</h1>
+                <p>A mobile responsive webpage that work in different device</p>
+            </div>
+            <div class="cardBack modalDiv">
+                 <button onclick="hideModal()"><i class="fa fa-times"></i></button>    
+                <h1>Xylophone</h1>
+                <p>Test your music pallete using xylophone</p>
+            </div>
+            <div class="cardBack modalDiv">
+                 <button onclick="hideModal()"><i class="fa fa-times"></i></button>    
+                <h1>Landing Page</h1>
+                <p>Beautiful landing page to capture more people to your website</p>
+            </div>
+            <div class="cardBack modalDiv">
+                 <button onclick="hideModal()"><i class="fa fa-times"></i></button>    
+                <h1>New Project</h1>
+                <p>coming soon</p>
+            </div>
+            <div class="cardBack modalDiv">
+                 <button onclick="hideModal()"><i class="fa fa-times"></i></button>    
+                <h1>New Project</h1>
+                <p>coming soon</p>
+            </div>
+        </div>
+            
         </div>
 
         <script src="js/main.js"></script>
