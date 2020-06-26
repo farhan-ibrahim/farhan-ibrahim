@@ -1,13 +1,20 @@
-// Project Section
+// SHOW INFO OF EVERY PROJECT
 var infos = document.getElementsByClassName('modalDiv');
 console.log(infos);
 
+// to detect browser size
+var w = window.innerWidth;
+
 // function showInfo
 function showInfo(id){
-    // to show modal
-    document.getElementById('modal').style.display="flex";
-    //to show info
-    infos[id].style.display='inline';
+
+    if ( w <= 480){
+        // to show modal
+        document.getElementById('modal').style.display="flex";
+        //to show info
+        infos[id].style.display='inline';
+    }
+    
 }
 
 // to hide info
@@ -19,6 +26,59 @@ function hideModal(){
         infos[i].style.display='none';
     }
 }
+
+// MENU ICON INDICATOR
+
+var home = document.getElementById('home');
+var about = document.getElementById('about');
+var project = document.getElementById('project');
+var contact = document.getElementById('contact');
+var menuIcon = document.querySelectorAll('#menu li a');
+
+console.log('home'+ home.offsetTop);
+console.log('about'+ about.offsetTop);
+console.log('project' + project.offsetTop);
+console.log('contact' + contact.offsetTop);
+console.log(menuIcon);
+console.log(window.scrollY);
+
+sectActive = false
+
+// to activate home icon when loading page
+// if(window.scrollY == 0 && sectActive === false){
+//     menuIcon[0].className='menuActive';
+//     sectActive = true;
+// }
+
+document.addEventListener('scroll', function(){
+    //to make icon color to default
+    for (i=0; i < menuIcon.length; i++){
+    menuIcon[i].className='menuIcon';
+    sectActive = false;
+    }
+
+    // to add active class
+    if (home.offsetTop >= window.scrollY){
+        menuIcon[0].className='menuIcon active';
+        sectActive = true;
+    }
+    if (about.offsetTop >= window.scrollY){
+        menuIcon[1].className='menuIcon active';
+        sectActive = true;
+    }
+    if (project.offsetTop >= window.scrollY){
+        menuIcon[2].className='menuIcon active';
+        sectActive = true;
+    }
+    if (contact.offsetTop >= window.scrollY){
+        menuIcon[3].className='menuIcon active';
+        sectActive = true;
+    }
+
+   
+
+})
+
 
 
 
