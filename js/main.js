@@ -13,8 +13,7 @@ function showInfo(id){
         document.getElementById('modal').style.display="flex";
         //to show info
         infos[id].style.display='inline';
-    }
-    
+    }  
 }
 
 // to hide info
@@ -33,7 +32,7 @@ var home = document.getElementById('home');
 var about = document.getElementById('about');
 var project = document.getElementById('project');
 var contact = document.getElementById('contact');
-var menuIcon = document.querySelectorAll('#menu li a');
+var menuIcon = document.getElementsByClassName('menuIcon');
 
 console.log('home'+ home.offsetTop);
 console.log('about'+ about.offsetTop);
