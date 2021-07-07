@@ -11,7 +11,7 @@
                 <div class="contentWrap" id="headerWrap">
                     <div id="profile">
                         <a href="#home"><img id="profileLogo" src="images/person.png" /></a>
-                        <h1 id="profileName">farhan.</h1>
+                        <h2 id="profileName">farhan.</h2>
                     </div>
                     
                     <ul id="menuTop">
@@ -65,12 +65,17 @@
                 <div class="contentWrap">
                     <h1 id="aboutTitle">About Me</h1>
                     <div id="desc">
-                        <p>I am not your 'pure breed' software developer. I started my career as a chemical engineer as I spent almost three years in designing chemical plants. In 2018, I discovered about data science and I started to learn programming languages such as R, Python, HTML, CSS, Javascript. In 2019, I enrolled into data engineering certificate program where I learn using Apache tools such as Spark, Kafka and Flume. Currently I'm working as Software Engineer at INVOKE Malaysia.
-                        </p>
+                        <p>Farhan Ibrahim is an engineering graduate from University Grenoble Alpes, France. He spent 6 years in France while completing his Master in Process Engineering. During his university years, he had opportunity to work in international company such as LafargeHolcim which nurture him with valuable working experience. He also speak French fluently.
+
+                            He self-learn data science skills such as R, SQL, Phyton, Hadoop and Spark.
+                            
+                            He obtained Data Engineer certificate in early 2020 and later he joined INVOKE  under Software Engineer conversion program and completed 3 months bootcamp.</p>
+                        <!-- <p>I am not your 'pure breed' software developer. I started my career as a chemical engineer as I spent almost three years in designing chemical plants. In 2018, I discovered about data science and I started to learn programming languages such as R, Python, HTML, CSS, Javascript. In 2019, I enrolled into data engineering certificate program where I learn using Apache tools such as Spark, Kafka and Flume. Currently I'm working as Software Engineer at INVOKE Solutions.
+                        </p> -->
                     </div>
                     <br>
                     <div id="skills">
-                        <h1>Skills</h1>
+                        <h1 id="skillTitle">Skills</h1>
                         <p>Let me use my knowledges to help you</p>
                         <div id="skillCardWrap">
                             <div class="skillCard">
@@ -105,37 +110,41 @@
                     <h1>Projects</h1>  
                 </div>
                 <div id="projectBox">
-                    <div class="projectCard" id="card0" onclick="showInfo(0)">
+                    <!-- <div class="projectCard" id="card0" onclick="showInfo(0)">
                         <div class="cardInner">
                             <div class="cardFront">
                                 <img src="images/pacman.svg"/>
                             </div>
                             <div class="cardBack">
-                                <h1>PacMan</h1>
+                                <h3 class="projectTitle" >PacMan</h3>
                                 <p>PacMan simulator made using pure javascript</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="projectCard" id="card1" onclick="showInfo(1)">
                         <div class="cardInner">
                             <div class="cardFront">
                                 <img src="images/responsive.svg"/>
                             </div>
-                            <div class="cardBack">
-                                <h1>Responsive Webpage</h1>
-                                <p>A mobile responsive webpage that work in different device</p>
-                            </div>
+                            <a href="projects/restaurant/index.html">
+                                <div class="cardBack" >
+                                    <h3 class="projectTitle" >Responsive Webpage</h3>
+                                    <p>A restaurant mobile responsive webpage that work in different device</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="projectCard" id="card2" onclick="showInfo(2)">
                         <div class="cardInner">
-                            <div class="cardFront">
-                                <img src="images/xylophone.svg"/>
-                            </div>
-                            <div class="cardBack">
-                                <h1>Xylophone</h1>
-                                <p>Test your music pallete using xylophone</p>
-                            </div>
+                                <div class="cardFront">
+                                    <img src="images/xylophone.svg"/>
+                                </div>
+                                <a href="projects/xylophone/xylophone.html">
+                                    <div class="cardBack">
+                                        <h3 class="projectTitle" >Xylophone</h3>
+                                        <p>Test your music pallete using xylophone</p>
+                                    </div>
+                                </a>
                         </div>
                     </div>
                     <div class="projectCard" id="card3" onclick="showInfo(3)">
@@ -143,19 +152,21 @@
                             <div class="cardFront">
                                 <img src="images/ui.svg"/>
                             </div>
-                            <div class="cardBack">
-                                <h1>Landing Page</h1>
-                                <p>Beautiful landing page to capture more people to your website</p>
-                            </div>
+                            <a href="projects/concert/index.html">
+                                <div class="cardBack">
+                                    <h3 class="projectTitle">Landing Page</h3>
+                                    <p>Concert Ticket Landing Page</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="projectCard" id="card4" onclick="showInfo(4)">
+                    <!-- <div class="projectCard" id="card4" onclick="showInfo(4)">
                         <div class="cardInner">
                             <div class="cardFront">
                                 <img src="images/ui.svg"/>
                             </div>
                             <div class="cardBack">
-                                <h1>New Project</h1>
+                                <h3 class="projectTitle" >New Project</h3>
                                 <p>coming soon</p>
                             </div>
                         </div>
@@ -166,11 +177,11 @@
                                 <img src="images/ui.svg"/>
                             </div>
                             <div class="cardBack">
-                                <h1>New Proejct</h1>
+                                <h3 class="projectTitle" >New Proejct</h3>
                                 <p>coming soon</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </section>
 
@@ -205,23 +216,29 @@
         <div id="modal">
             <div class="cardBack modalDiv" id="cBM2">
                 <button onclick="hideModal()"><i class="fa fa-times"></i></button>
-                <h1>PacMan</h1>
+                <h3 class="projectTitle">PacMan</h3>
                 <p>PacMan simulator made using pure javascript</p>
             </div>
-            <div class="cardBack modalDiv" id="cBM2">
-                <button onclick="hideModal()"><i class="fa fa-times"></i></button>
-                <h1>Responsive Webpage</h1>
-                <p>A mobile responsive webpage that work in different device</p>
-            </div>
+                <div class="cardBack modalDiv" id="cBM2">
+                    <button onclick="hideModal()"><i class="fa fa-times"></i></button>
+                    <a href="projects/restaurant/index.html">
+                        <h3 class="projectTitle">Responsive Webpage</h3>
+                    </a>
+                    <p>A restaurant mobile responsive webpage that work in different device</p>
+                </div>
+                <div class="cardBack modalDiv">
+                    <button onclick="hideModal()"><i class="fa fa-times"></i></button>
+                    <a href="projects/xylophone/xylophone.html">
+                        <h3 class="projectTitle">Xylophone</h3>
+                    </a>
+                    <p>Test your music pallete using xylophone</p>
+                </div>
             <div class="cardBack modalDiv">
-                 <button onclick="hideModal()"><i class="fa fa-times"></i></button>    
-                <h1>Xylophone</h1>
-                <p>Test your music pallete using xylophone</p>
-            </div>
-            <div class="cardBack modalDiv">
-                 <button onclick="hideModal()"><i class="fa fa-times"></i></button>    
-                <h1>Landing Page</h1>
-                <p>Beautiful landing page to capture more people to your website</p>
+                <button onclick="hideModal()"><i class="fa fa-times"></i></button>  
+                <a href="projects/concert/index.html">
+                    <h3 class="projectTitle">Landing Page</h3>
+                </a>
+                <p>Concert Ticket Landing Page</p>
             </div>
             <div class="cardBack modalDiv">
                  <button onclick="hideModal()"><i class="fa fa-times"></i></button>    
