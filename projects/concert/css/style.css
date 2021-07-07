@@ -1,0 +1,315 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    /* margin: 1em; */
+    min-width: 430px;
+    scroll-behavior: smooth;
+}
+img{
+    width: 100%;
+}
+#container{
+    position: relative;
+}
+header{
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif, monospace;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* height: 50px; */
+}
+header h1{
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 40px;
+}
+header a{
+    text-decoration: none;
+    color: white;
+}
+.menu-icon{
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 40px;
+}
+.search-icon{
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 40px;
+    color: white;
+    display: none;
+}
+header ul{
+    list-style-type: none;
+    width: 100%;
+    line-height: 40px;
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    display: none;  
+}
+header li{
+    font-size: 20px;
+    font-weight: 200;
+    font-family: sans-serif, monospace;
+    font-weight: bold;
+    margin: 0 10px;
+    border-bottom: 1px solid white;
+    transition: all 1s;
+}
+header li:hover{
+    opacity: 1;
+}
+#banner img{
+    margin-top: 40px;
+}
+#intro{
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 200;
+}
+#intro h1{
+    text-transform: uppercase;
+    font-weight: 200;
+    margin: 20px 0;
+}
+#intro p{
+    margin: 20px 0;
+    font-weight: 500;
+}
+#desc{
+    text-align: justify;
+}
+#member{
+    padding: 10px 100px;
+}
+.memberCard{
+    text-align: center;
+    text-transform: capitalize;
+    font-family: sans-serif, monospace;
+    margin-bottom: 20px;
+}
+.memberCard p{
+    margin-bottom: 20px;
+}
+#tour{
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-family: monospace, sans-serif;
+    text-align: center;
+}
+#tourTitle{
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 5px;
+    margin: 30px;
+}
+#tourSubtitle{
+    margin-bottom: 30px;
+    font-size: 12px;
+    font-weight: 200;
+    color: lightgray;
+}
+#month ul{
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+#month li{
+    width: 100%;
+    background-color: white;
+    border: 1px solid gray;
+    color: black;
+    text-transform: capitalize;
+    text-align: left;
+    padding: 10px;
+}
+.soldOut::after{
+    content: "Sold Out";
+    background-color: red;
+    color: white;
+    margin: 0 10px;
+    padding: 2px;
+}
+#available::after{
+    content: "3";
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    margin: 0 10px;
+    padding: 3px;
+    float: right;
+}
+.tourLocation{
+    background-color: white;
+    display: flex;
+    padding: 10px;
+    margin: 10px 0;
+}
+.tourLocation img{
+    height: 100%;
+    width: 150px;
+}
+.tourDetails{
+    font-size: 15px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: black;
+    text-align: left;
+}
+.place{
+    font-weight: bold;
+}
+.date{
+    color: lightgray;
+}
+.ticket{
+    width: auto;
+    background-color: black;
+    color: white;
+    text-transform: capitalize;
+    border: none;
+    padding:10px;
+}
+#contact{
+    padding: 20px;
+    margin-bottom: 50px;
+    font-family: sans-serif;
+    text-align: center;
+}
+#contactTitle{
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 5px;
+    margin: 30px;
+}
+#contactSubtitle{
+    margin-bottom: 30px;
+    font-size: 12px;
+    font-weight: 200;
+    color: lightgray;
+}
+#contact ul{
+    list-style-type: none;
+    text-align: left;
+}
+#contact li{
+    font-weight: bold;
+    margin: 10px;
+}
+.contact-icon{
+    width: 50px;
+}
+input{
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-transform: capitalize;
+    padding: 10px;
+    border: 1px solid lightgrey;
+}
+#contact button{
+    float: right;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 20px 0;
+    border: none;
+}
+#socmed{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 50px 20px 10px 20px;
+}
+.socmed-icon{
+    width: 20px;
+    color: lightslategray;
+}
+footer p{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+@media (min-width:600px){
+    #intro, #month, #member, #tourLocationHolder, #contact {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    h1:hover{
+        background-color: white;
+    }
+    a:hover{
+        color: black;
+    }
+    .fa-bars{
+        display: none;
+    }
+    header ul{
+        width: auto;
+        display: flex;
+        top: 0;
+        left: 80px;  
+        opacity: 1;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    header li{
+        border: none;
+    }
+    header li:hover{
+        background-color: white;
+        color: black;
+        cursor: pointer;
+    }
+    .search-icon{
+        display:inline;
+    }
+    #member{
+        display: flex;
+        justify-content: space-between;
+    }
+    .memberCard{
+        width: 200px;
+    }
+    #tourLocationHolder{
+        display: flex;
+        justify-content: space-between;
+    }
+    .tourLocation{
+        flex-direction: column;
+        width: 250px;
+    }
+    .tourLocation img{
+        width: 100%;
+        height: auto;
+    }
+    .tourDetails{
+        padding-left: 0;
+    }
+    .tourDetails p{
+        margin-bottom: 20px;
+    }
+}
