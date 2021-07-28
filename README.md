@@ -1,4 +1,21 @@
-# Portfolio
+## Hello World!
+
+:sunglasses: Farhan Ibrahim</br>
+:round_pushpin: Bangi</br>
+:computer: [INVOKE](invokeisdata.com)</br>
+:soccer: Real Madrid
+
+
+### Stack
+
+* Javascript
+* Typescript
+* React Native
+* React
+* Svelte
+* Python
+
+
 My first portfolio website
 
 ## Links
