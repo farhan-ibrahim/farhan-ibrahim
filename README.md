@@ -15,9 +15,6 @@
 * Svelte
 * Python
 
-
-My first portfolio website
-
 ## Links
 
 * [Homepage](https://farhan-ibrahim.github.io/portfolio/)
