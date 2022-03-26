@@ -3,6 +3,7 @@
 :sunglasses: Farhan Ibrahim</br>
 :round_pushpin: Bangi</br>
 :computer: [INVOKE](invokeisdata.com)</br>
+📱 [meniaga.my](https://meniaga.my/) , [decoris.io](https://decoris.io/)</br>
 :soccer: Real Madrid<br/>
 [![alt text][1.2]][1] @farhunt_ibrahim
 
@@ -18,6 +19,7 @@
 * Javascript
 * Typescript
 * React Native
+* Expo
 * React
 * Svelte
 * Python
