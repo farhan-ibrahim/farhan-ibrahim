@@ -15,14 +15,9 @@
 
 ### Stack
 
-* Javascript
-* Typescript
-* React Native
-* Expo
-* React
-* Svelte
-* Python
-
+| Mobile Apps | Web |  System | Tools |
+| :--------: | :---: | :----: | :----: |
+|Flutter <br />Golang <br />React Native <br />React<br />Expo |Next <br />React <br />Svelte |Python <br />Golang <br />Kotlin <br />Jsonnet |Grafana <br />Loki <br />Argo Workflow <br />Argo CD <br />Kubectl <br />Redash |
 
 ## Links
 
