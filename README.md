@@ -1,7 +1,7 @@
 ## Hello World!
 
 :sunglasses: Farhan Ibrahim</br>
-:round_pushpin: Bangi</br>
+:round_pushpin: Semenyih, MY</br>
 :computer: [BEAM](https://www.ridebeam.com/)</br>
 :soccer: Real Madrid<br/>
 [![alt text][1.2]][1] @farhunt_ibrahim
